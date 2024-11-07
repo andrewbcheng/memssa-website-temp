@@ -1,0 +1,37 @@
+// import About from '../pages/About.page'
+import Constitution from '../pages/Office/Constitution.page'
+// import Team from '../pages/Office/Team.page'
+// import PastBills from '../pages/Office/PastBills.page'
+// import StudentResources from '../pages/Resources/StudentResources.page'
+import RSOResources from '../pages/Resources/RSOResources.page'
+// import Calendar from '../pages/Calendar.page'
+// import Community from '../pages/Community.page'
+
+export interface NavBarItem {
+    path: string
+    label: string
+    unavailable?: boolean
+    active?: boolean
+    new?: boolean
+    subItems?: NavBarItem[]
+    component?: () => JSX.Element
+}
+
+export const OFFICE_ITEMS: NavBarItem[] = [
+    { path: '/office/constitution', label: 'Constitution', component: Constitution},
+    // { path: , label: , component: },
+    // { path: , label: , component: },
+]
+
+export const RESOURCE_ITEMS: NavBarItem[] = [
+    // { path: , label: , component: },
+    { path: '/resources/rsoresources', label: 'RSO Resources', component: RSOResources},
+]
+
+export const NAV_BAR_ITEMS: NavBarItem[] = [
+    // { path: /about, label: , component: },
+    { path: '/office', label: 'Our Office', subItems: OFFICE_ITEMS},
+    { path: '/resources', label: 'Resources', subItems: RESOURCE_ITEMS},
+    // { path: /calendar, label: , component: },
+    // { path: /community, label: , component: },
+]
