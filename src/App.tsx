@@ -15,7 +15,7 @@ function App() {
   }, [pathname])
 
   //<Route index element={<Home />} />
-
+  
   return (
     <Routes>
       <Route path='/' element={<Home />}>
