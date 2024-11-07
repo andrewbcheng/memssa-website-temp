@@ -4,7 +4,7 @@ function RSOResources() {
         // page div
         <>
           <div>
-            RSO Resources
+            <h1>RSO Leader Resources</h1>
           </div>  
         </>
     );
