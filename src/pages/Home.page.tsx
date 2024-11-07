@@ -4,7 +4,7 @@ function Home() {
         // page div
         <>
           <div>
-            Home
+            wat
           </div>  
         </>
     );
