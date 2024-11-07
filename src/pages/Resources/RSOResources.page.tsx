@@ -4,7 +4,7 @@ function RSOResources() {
         // page div
         <>
           <div>
-            omengus
+            RSO Resources
           </div>  
         </>
     );

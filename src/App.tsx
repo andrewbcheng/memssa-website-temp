@@ -14,11 +14,10 @@ function App() {
       window.scrollTo(0, 0)
   }, [pathname])
 
-  //<Route index element={<Home />} />
-  
   return (
     <Routes>
-      <Route path='/' element={<Home />}>
+      <Route path='/'>
+        <Route index element={<Home />} />
         {NAV_BAR_ITEMS.map((item) => {
           if (item.subItems) {
             return item.subItems.map((subItem) => {

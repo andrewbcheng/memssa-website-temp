@@ -4,7 +4,7 @@ function Constitution() {
       // page div
       <>
         <div>
-          wallahi  
+          Constitution  
         </div>  
       </>
   );
