@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, Routes, useLocation } from 'react-router-dom'
+//import Navigation from './components/Navigation/Navigation'
+import { NAV_BAR_ITEMS } from './data/navbaritems.data'
+import Home from './pages/Home.page'
+import './styles/defaults.css'
+import './styles/theme.css'
+import NotFound from './pages/NotFound.page'
+import { useEffect } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+      window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Routes>
+      <Route path='/'>
+        <Route index element={<Home />} />
+        {NAV_BAR_ITEMS.map((item) => {
+          if (item.subItems) {
+            return item.subItems.map((subItem) => {
+              return <Route path={subItem.path} element={subItem.component!()} />
+            })
+        } else {
+            return <Route path={item.path} element={item.component!()} />
+          }
+        })}
+        <Route path='*' element={<NotFound />} />
+      </Route>
+    </Routes>
   )
 }
 
