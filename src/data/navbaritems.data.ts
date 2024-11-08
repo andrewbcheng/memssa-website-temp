@@ -1,7 +1,7 @@
 // import About from '../pages/About.page'
 import Constitution from '../pages/Office/Constitution.page'
 // import Team from '../pages/Office/Team.page'
-// import PastBills from '../pages/Office/PastBills.page'
+import PastBills from '../pages/Office/PastBills.page'
 // import StudentResources from '../pages/Resources/StudentResources.page'
 import RSOResources from '../pages/Resources/RSOResources.page'
 // import Calendar from '../pages/Calendar.page'
@@ -20,7 +20,7 @@ export interface NavBarItem {
 export const OFFICE_ITEMS: NavBarItem[] = [
     { path: '/office/constitution', label: 'Constitution', component: Constitution},
     // { path: , label: , component: },
-    // { path: , label: , component: },
+    { path: '/office/pastbills', label: 'Past Bills', component: PastBills},
 ]
 
 export const RESOURCE_ITEMS: NavBarItem[] = [
