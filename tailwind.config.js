@@ -1,5 +1,11 @@
 module.exports = {
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    content: [
+        './index.html',
+        './src/**/*.{js,jsx,ts,tsx}',
+        './src/pages/**/*.{js,jsx,ts,tsx}',
+        './src/pages/Office/**/*.{js,jsx,ts,tsx}',
+        './src/pages/Resources**/*.{js,jsx,ts,tsx}',
+    ],
     theme: {
         extend: {
             fontFamily: {
@@ -31,4 +37,4 @@ module.exports = {
         },
     },
     plugins: [],
-}
+};
