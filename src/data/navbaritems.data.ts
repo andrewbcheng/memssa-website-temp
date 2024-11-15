@@ -2,7 +2,7 @@
 import Constitution from '../pages/Office/Constitution.page'
 // import Team from '../pages/Office/Team.page'
 // import PastBills from '../pages/Office/PastBills.page'
-// import StudentResources from '../pages/Resources/StudentResources.page'
+import StudentResources from '../pages/Resources/StudentResources.page'
 import RSOResources from '../pages/Resources/RSOResources.page'
 import Calendar from '../pages/Calendar.page'
 // import Community from '../pages/Community.page'
@@ -24,7 +24,8 @@ export const OFFICE_ITEMS: NavBarItem[] = [
 
 export const RESOURCE_ITEMS: NavBarItem[] = [
     // { path: , label: , component: },
-    { path: '/resources/rsoresources', label: 'RSO Resources', component: RSOResources},
+    { path: '/resources/rso', label: 'RSO Resources', component: RSOResources},
+    { path: '/resources/student', label: 'Student Resources', component: StudentResources},
 ]
 
 export const NAV_BAR_ITEMS: NavBarItem[] = [
