@@ -4,7 +4,7 @@ import Constitution from '../pages/Office/Constitution.page'
 // import PastBills from '../pages/Office/PastBills.page'
 // import StudentResources from '../pages/Resources/StudentResources.page'
 import RSOResources from '../pages/Resources/RSOResources.page'
-// import Calendar from '../pages/Calendar.page'
+import Calendar from '../pages/Calendar.page'
 // import Community from '../pages/Community.page'
 
 export interface NavBarItem {
@@ -20,7 +20,6 @@ export interface NavBarItem {
 export const OFFICE_ITEMS: NavBarItem[] = [
     { path: '/office/constitution', label: 'Constitution', component: Constitution},
     // { path: , label: , component: },
-    // { path: , label: , component: },
 ]
 
 export const RESOURCE_ITEMS: NavBarItem[] = [
@@ -32,6 +31,6 @@ export const NAV_BAR_ITEMS: NavBarItem[] = [
     // { path: /about, label: , component: },
     { path: '/office', label: 'Our Office', subItems: OFFICE_ITEMS},
     { path: '/resources', label: 'Resources', subItems: RESOURCE_ITEMS},
-    // { path: /calendar, label: , component: },
+    { path: '/calendar', label: 'Calendar', component: Calendar},
     // { path: /community, label: , component: },
 ]
