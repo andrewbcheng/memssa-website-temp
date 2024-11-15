@@ -9,10 +9,10 @@ function Constitution() {
           <header className="w-ful text-center">
             <h1 className="text-red-50">Our Constitution</h1>
           </header>
-          <div className="w-1/2 flex flex-center">
+          <div className="w-full flex justify-center">
             <iframe
               src={ConstitutionPDF}
-              width="100%"
+              width="80%"
               height="900px"
               className="border-black rounded-md"
               title="Constitution"
