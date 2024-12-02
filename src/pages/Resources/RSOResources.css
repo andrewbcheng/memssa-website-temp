@@ -1,0 +1,92 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #E6D7C3;
+    color: #5D2D29;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #D4B78F;
+    padding-top: 20px;
+}
+
+#resource-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.resource-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+.resource-box {
+    background-color: #E6D7C3;
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resource-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.resource-box p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.resource-box a {
+    color: #5D2D29;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+}
+
+.resource-box a:hover {
+    text-decoration: underline;
+}
+
+.graphics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphics {
+    width: auto;
+    height: auto;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reduce whitespace and adjust spacing */
+.resource-section {
+    margin: 10px 0;
+    padding: 20px;
+}
+
+#resource-container {
+    padding: 20px;
+}
+
+.resource-box {
+    margin: 10px;
+}

@@ -1,36 +1,49 @@
+import React from 'react';
+import './RSOResources.css';
+import Navbar from '../NavBar/Navbar';
+import Footer from '../Footer/Footer';
+import fullGroup from './1A4A3358.jpg'
+import halfGroup from './1A4A3559.jpg'
+
 function RSOResources() {
     return (
-        // header here
-        // page div
+        // Header here
+        // Page div
         <>
+          <Navbar />
           <div>
             <header>
-                <h1>RSO Leader Resources</h1>
+                <h1 className="header">RSO Leader Resources</h1>
             </header>
-            {/* split btwn top and bottom*/}
-            <div id="resource-container">
-                {/* split btwn graphics and funding*/}
-                <div id="FundingR's" className="">
-                    <div>
-                        {/* graphics here (may need to add extra div for display pos) */}
+=            <div id="resource-container">
+=                <div id="FundingR" className="resource-section" style={{ display: 'flex', alignItems: 'center' }}>
+                    <div className="graphics-container" style={{ flex: '1' }}>
+                        <img src={fullGroup} alt="Funding Resources Graphic" className="graphics" style={{ width: '100%', height: 'auto' }} />
                     </div>
-                    <div>
-                        {/* Funding here (may need to add extra div for display pos) */}
+                    <div className="resource-box" style={{ flex: '0.5', padding: '20px' }}>
+                        <h3>Funding Resources</h3>
+                        <p>ASUC provides funding opportunities for student programs and events. Learn how to apply and get support for your initiatives below.</p>
+                        <a href='https://callink.berkeley.edu/organization/asucsenateonly/'>ASUC Senate</a>
+                        <a href="https://asuc.org/student-orgs/">ASUC Funding Page</a>
+                        <a href="https://asuc.org/public-notice/">Sign Up for ASUC Meetings</a>
+                        <a href="mailto:senate@asuc.org">Contact ASUC for Funding Queries</a>
                     </div>
                 </div>
-                {/* split btwn booking and graphics*/}
-                <div id="BookingR's" className="">
-                    <div>
-                        {/* Booking here (may need to add extra div for display pos) */}
+                <div id="BookingR" className="resource-section" style={{ display: 'flex', alignItems: 'center' }}>
+                    <div className="resource-box" style={{ flex: '0.5', padding: '20px' }}>
+                        <h3>Booking Resources</h3>
+                        <a href='https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2uuFG3En3ObBPHnw_LENfm84iv16edU_6PhsJkCdIAx8SSf3vDVIzGYzTieUOyYKqYDUzM8Z7Q'>Book a Meeting With Us </a>
+                        <a href='https://25live.collegenet.com/pro/berkeley#!/home/dash'>Book a Classroom </a>
                     </div>
-                    <div>
-                        {/* graphics here (may need to add extra div for display pos) */}
+                    <div className="graphics-container" style={{ flex: '1' }}>
+                        <img src={halfGroup} alt="Booking Resources Graphic" className="graphics" style={{ width: '100%', height: 'auto' }} />
                     </div>
                 </div>
             </div>
           </div>  
+          <Footer />
         </>
     );
 }
 
-export default RSOResources
+export default RSOResources;

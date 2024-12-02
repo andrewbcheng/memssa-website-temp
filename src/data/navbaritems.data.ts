@@ -30,7 +30,6 @@ export const RESOURCE_ITEMS: NavBarItem[] = [
 ]
 
 export const NAV_BAR_ITEMS: NavBarItem[] = [
-    // { path: /about, label: , component: },
     { path: '/office', label: 'Our Office', subItems: OFFICE_ITEMS},
     { path: '/resources', label: 'Resources', subItems: RESOURCE_ITEMS},
     { path: '/calendar', label: 'Calendar', component: Calendar},
